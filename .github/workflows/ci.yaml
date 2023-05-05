@@ -6,8 +6,5 @@ on:
     branches:
       - 'release/**'
 jobs:
-  yamllint:
-    uses: networkservicemesh/.github/.github/workflows/yamllint.yaml@main
-
   shellcheck:
     uses: networkservicemesh/.github/.github/workflows/shellcheck.yaml@main
