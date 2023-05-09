@@ -17,7 +17,5 @@ jobs:
     name: Create release
     if: ${{ github.event.workflow_run.conclusion == 'success' && contains(github.event.workflow_run.head_branch, 'release/') }}
     uses: NikitaSkrynnik/.github/.github/workflows/release.yaml@release-act
-    with:
-      tag: ${{ needs.get-tag.outputs.tag }}
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
